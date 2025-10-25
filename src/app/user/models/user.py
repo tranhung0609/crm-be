@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional, List
 from pydantic import Field
-from app import BaseEntity
+from src.app import BaseEntity
 from src.core.utils.utils import get_timestamp_utc
 
 class User(BaseEntity):

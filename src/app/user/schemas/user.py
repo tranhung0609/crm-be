@@ -7,7 +7,7 @@ from src.app.user.models.user import User
 from src.core.utils.utils import get_timestamp_utc
 from src.core.models.common import Paginator
 
-class UserRegisterRequest(BaseModel):
+class UserCreateRequest(BaseModel):
     user_name: str = Field(..., title="Tên người dùng")
     email: EmailStr = Field(..., title="Email người dùng")
     full_name: Optional[str] = Field(None, title="Họ và tên người dùng")
@@ -23,4 +23,5 @@ class UserRegisterRequest(BaseModel):
     avatar: Optional[str] = Field(None, title="Ảnh đại diện người dùng")
     gender: Optional[str] = Field(None, title="Giới tính người dùng")
     date_of_birth: Optional[int] = Field(None, title="Ngày sinh người dùng")
+    
     
